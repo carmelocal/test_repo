@@ -14,7 +14,7 @@ node{
         stage('Install kubectl'){
            //Install kubectl
            sh 'chmod 777 ./install-kubectl.sh'
-           sh './install-kubectl.sh'
+           sh './kubectl-install.sh'
         } 
     }
     catch (err) {
