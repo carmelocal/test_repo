@@ -16,8 +16,8 @@ node{
             def proxy = 'http://10.72.70.200:8888'
            //Install kubectl
            sh 'chmod 777 ./kubectl-install.sh'
-           //sh './kubectl-install.sh' ${proxy}
-            echo '${proxy}'
+           //sh './kubectl-install.sh' "${proxy}"
+            echo "${proxy}"
         } 
     }
     catch (err) {
