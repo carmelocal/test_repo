@@ -10,7 +10,12 @@ node{
         stage('Clone repository'){
            //gets all the SCM files
            checkout scm
-        }       
+        }   
+        stage('Install kubectl'){
+           //Install kubectl
+           sh 'chmod 777 ./install-kubectl.sh'
+           sh './install-kubectl.sh'
+        } 
     }
     catch (err) {
         currentBuild.result = "FAILURE"
