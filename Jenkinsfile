@@ -1,21 +1,22 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying..'
-            }
-        }
+//first JENKINS pipeline definition
+node{
+    currentBuild.result = "SUCCESS"
+    // app will contains the docker image
+    def app 
+    try {
+        //START
+        //notifyStarted()
+        //STAGE 1 - CLONE
+        stage('Clone repository'){
+           //gets all the SCM files
+           checkout scm
+        }       
+    }
+    catch (err) {
+        currentBuild.result = "FAILURE"
+        //ERROR
+        //notifyFailure(err)
+        //USED to notifiy to JENKINS that somthing happens
+        throw err
     }
 }
