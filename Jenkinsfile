@@ -12,10 +12,15 @@ node{
            //gets all the SCM files
            checkout scm
         }   
-        stage('Install kubectl'){
-           //Install kubectl
-           sh 'chmod 777 ./kubectl-install.sh'
-           sh "./kubectl-install.sh ${proxy}"
+        //stage('Install kubectl'){
+           ////Install kubectl
+           //sh 'chmod 777 ./kubectl-install.sh'
+           //sh "./kubectl-install.sh ${proxy}"
+        //} 
+        stage('Install az'){
+           //Install az
+           sh 'chmod 777 ./az-install.sh'
+           sh "./az-install.sh ${proxy}"
         } 
     }
     catch (err) {
