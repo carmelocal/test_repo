@@ -1,5 +1,5 @@
 # Download the Microsoft repository GPG keys
-wget -e use_proxy=yes -e https_proxy=$1 https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
+wget -q -e use_proxy=yes -e https_proxy=$1 https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
 
 # Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
