@@ -1,5 +1,9 @@
+#Set proxy
+export http_proxy=http://$1
+export https_proxy=http://$1
+
 # Download the Microsoft repository GPG keys
-wget -q https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb -e use_proxy=yes -e http_proxy=10.72.70.116:8888
+wget -q https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
 
 # Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
@@ -11,4 +15,4 @@ sudo apt-get update
 sudo add-apt-repository universe
 
 # Install PowerShell
-#sudo apt-get install -y powershell
+sudo apt-get install -y powershell
