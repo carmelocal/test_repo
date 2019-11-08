@@ -2,7 +2,7 @@
 curl https://packages.microsoft.com/keys/microsoft.asc --proxy $1 | sudo apt-key add -
 
 # Register the Microsoft Ubuntu repository
-curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list --proxy $1 | sudo tee /etc/apt/sources
+curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list --proxy $1 | sudo tee -a /etc/apt/sources
 
 # Download the Microsoft repository GPG keys
 #wget -q -e use_proxy=yes -e https_proxy=$1 https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
