@@ -3,7 +3,7 @@ node{
     currentBuild.result = "SUCCESS"
     // app will contains the docker image
     def app 
-    def proxy = 'http://10.72.70.200:8888'
+    def proxy = 'http://10.72.70.116:8888'
     try {
         //START
         //notifyStarted()
@@ -20,7 +20,7 @@ node{
         stage('Install az'){
            //Install az
            sh 'chmod 777 ./az-install.sh'
-           sh "./az-install.sh ${proxy}"
+           sh "./az-install.sh"
         } 
         stage('Install powershell'){
            //Install powershell
