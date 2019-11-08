@@ -17,16 +17,16 @@ node{
            sh 'chmod 777 ./kubectl-install.sh'
            sh "./kubectl-install.sh ${proxy}"
         } 
-        stage('Install az'){
-           //Install az
-           sh 'chmod 777 ./az-install.sh'
-           sh "./az-install.sh ${proxy}"
-        } 
-        stage('Install powershell'){
-           //Install powershell
-           sh 'chmod 777 ./powershell-install.sh'
-           sh "./powershell-install.sh ${proxy}"
-        }
+        //stage('Install az'){
+          // //Install az
+           //sh 'chmod 777 ./az-install.sh'
+           //sh "./az-install.sh ${proxy}"
+        //} 
+        //stage('Install powershell'){
+          // //Install powershell
+          // sh 'chmod 777 ./powershell-install.sh'
+          // sh "./powershell-install.sh ${proxy}"
+        //}
     }
     catch (err) {
         currentBuild.result = "FAILURE"
