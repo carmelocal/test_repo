@@ -1,6 +1,6 @@
 #Set proxy
-export http_proxy=$1
-export https_proxy=$1
+export http_proxy='$1'
+export https_proxy='$1'
 
 # Download the Microsoft repository GPG keys
 #wget -q https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
